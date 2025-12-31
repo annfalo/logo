@@ -1,12 +1,15 @@
-const element = document.querySelector('.alamode');
+document.addEventListener('DOMContentLoaded', () => {
+    const element = document.querySelector('.alamode');
 
-setInterval(() => {
-    element.style.animation = 'none';
+    setInterval(() => {
+        element.style.animation = 'none';
 
-    setTimeout(() => {
-        element.style.animation = 'purupuru 1s linear';
-    }, 50);
-}, 10000);
+        setTimeout(() => {
+            element.style.animation = 'purupuru 1s linear';
+        }, 50);
+    }, 10000);
+});
+
 //////
 const katakata = document.querySelector('.katakata');
 
