@@ -1,4 +1,4 @@
-const element = document.querySelector('.àlamode');
+const element = document.querySelector('.alamode');
 
 setInterval(() => {
     element.style.animation = 'none';
