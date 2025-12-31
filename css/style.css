@@ -1,0 +1,645 @@
+@charset "UTF-8";
+/*///////////////////////////
+全体設定
+///////////////////////////*/
+:root {
+  --yellow: #FFEC00;
+  --pink: #E47972;
+  --lightblue: #00B8EA;
+  --gray: #E0E0E0;
+  --liteyellow: #FFFFEB;
+  --black: #030201;
+  --white: #f9f9f3;
+  --font: "M PLUS 1p", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--black);
+  background: url(../img/bg-r.png) repeat center center/contain;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: clamp(0.75rem, 0.661rem + 0.45vw, 0.875rem);
+  }
+}
+body main {
+  margin: 100px 1rem;
+}
+body section {
+  margin: 0 auto;
+  background-color: var(--white);
+  border: 1px solid var(--gray);
+  border-radius: 50px;
+}
+body img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body .title {
+  font-size: 35px;
+  font-weight: bold;
+  font-family: "M PLUS 1p", serif;
+  font-weight: bold;
+  border: 2.5px solid var(--black);
+  border-radius: 50px;
+  padding: 0.1rem 1.5rem;
+  background-color: var(--lightblue);
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  body .title {
+    font-size: clamp(1.25rem, 0.804rem + 2.23vw, 1.875rem);
+  }
+}
+body .text {
+  padding: 2rem 5rem;
+  max-width: 500px;
+}
+@media screen and (max-width: 768px) {
+  body .text {
+    padding: 1rem 3rem;
+  }
+}
+body .inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+body p {
+  padding: 2rem 0 1rem;
+}
+body figcaption {
+  font-size: 12px;
+  width: 65%;
+  margin-top: 0.5rem;
+}
+@media screen and (max-width: 768px) {
+  body figcaption {
+    font-size: clamp(0.5rem, 0.321rem + 0.89vw, 0.75rem);
+  }
+}
+body hr {
+  border: none;
+  height: 8px;
+  background-image: repeating-linear-gradient(45deg, #ccc 0, #ccc 1px, transparent 0, transparent 50%);
+  background-size: 8px 8px;
+}
+
+/* ===============================================
+# top
+=============================================== */
+header {
+  height: 100vh;
+  background: url(../img/bg-b.png) repeat center center/cover;
+  position: relative;
+}
+header .àlamode {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  height: 100px;
+  width: auto;
+  -webkit-animation: purupuru 1s linear;
+          animation: purupuru 1s linear;
+}
+@media screen and (max-width: 768px) {
+  header .àlamode {
+    top: 88%;
+    height: 80px;
+  }
+}
+@-webkit-keyframes purupuru {
+  0% {
+    -webkit-transform: scale(1, 1) translate(0%, 0%);
+            transform: scale(1, 1) translate(0%, 0%);
+  }
+  40% {
+    -webkit-transform: scale(0.95, 1.2) translate(0%, -10%);
+            transform: scale(0.95, 1.2) translate(0%, -10%);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.9) translate(0%, 5%);
+            transform: scale(1.1, 0.9) translate(0%, 5%);
+  }
+  60% {
+    -webkit-transform: scale(0.95, 1.05) translate(0%, -3%);
+            transform: scale(0.95, 1.05) translate(0%, -3%);
+  }
+  70% {
+    -webkit-transform: scale(1.05, 0.95) translate(0%, 3%);
+            transform: scale(1.05, 0.95) translate(0%, 3%);
+  }
+  80% {
+    -webkit-transform: scale(1, 1) translate(0%, 0%);
+            transform: scale(1, 1) translate(0%, 0%);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translate(0%, 0%);
+            transform: scale(1, 1) translate(0%, 0%);
+  }
+}
+@keyframes purupuru {
+  0% {
+    -webkit-transform: scale(1, 1) translate(0%, 0%);
+            transform: scale(1, 1) translate(0%, 0%);
+  }
+  40% {
+    -webkit-transform: scale(0.95, 1.2) translate(0%, -10%);
+            transform: scale(0.95, 1.2) translate(0%, -10%);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.9) translate(0%, 5%);
+            transform: scale(1.1, 0.9) translate(0%, 5%);
+  }
+  60% {
+    -webkit-transform: scale(0.95, 1.05) translate(0%, -3%);
+            transform: scale(0.95, 1.05) translate(0%, -3%);
+  }
+  70% {
+    -webkit-transform: scale(1.05, 0.95) translate(0%, 3%);
+            transform: scale(1.05, 0.95) translate(0%, 3%);
+  }
+  80% {
+    -webkit-transform: scale(1, 1) translate(0%, 0%);
+            transform: scale(1, 1) translate(0%, 0%);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translate(0%, 0%);
+            transform: scale(1, 1) translate(0%, 0%);
+  }
+}
+header .top {
+  position: relative;
+}
+header .top .uchidasaki {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 5vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  gap: 2rem;
+  margin: 0 auto;
+}
+header .top .uchidasaki img {
+  height: 8vh;
+  opacity: 0;
+  -webkit-animation: blink 3s step-end infinite, bounce 1s ease-in-out infinite;
+          animation: blink 3s step-end infinite, bounce 1s ease-in-out infinite;
+}
+header .top img:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+header .top img:nth-child(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+header .top img:nth-child(3) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+header .top img:nth-child(4) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+header .top img:nth-child(5) {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+header .name-top {
+  position: absolute;
+  top: 52vh;
+  right: 53vw;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  width: 50%;
+  height: auto;
+  max-height: 600px;
+}
+@media screen and (max-width: 768px) {
+  header .name-top {
+    width: 80%;
+  }
+}
+header .scroll-prompt {
+  position: absolute;
+  bottom: -91vh;
+  left: 50vw;
+}
+header .scroll-prompt span {
+  position: relative;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--white);
+  display: block;
+  margin-bottom: 10px;
+  -webkit-animation: bounce 1.5s infinite ease-in-out;
+          animation: bounce 1.5s infinite ease-in-out;
+}
+header .scroll-prompt span:before {
+  content: "";
+  bottom: -85px;
+  left: 50%;
+  position: absolute;
+  width: 4px;
+  height: 85px;
+  background: var(--black);
+  -webkit-animation: moveGradient 3s infinite linear;
+          animation: moveGradient 3s infinite linear;
+}
+header .scroll-prompt span:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  height: 10px;
+  border: 1px solid var(--pink);
+  background: var(--yellow);
+  -webkit-animation: moveLine 1.5s infinite linear;
+          animation: moveLine 1.5s infinite linear;
+}
+@media screen and (max-width: 768px) {
+  header .scroll-prompt span {
+    left: -5vw;
+  }
+}
+@-webkit-keyframes moveLine {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+@keyframes moveLine {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+header .tree {
+  opacity: 0;
+  position: absolute;
+  top: 80vh;
+  left: -40vw;
+  height: 18vh;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation: fade 5s ease-in;
+          animation: fade 5s ease-in;
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scaleY(2);
+            transform: scaleY(2);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scaleY(2);
+            transform: scaleY(2);
+  }
+}
+
+/* ===============================================
+# 完成ロゴ
+=============================================== */
+/* ===============================================
+# 目標
+=============================================== */
+#goal ul {
+  display: inline-block;
+  font-size: 25px;
+  border: 1px solid;
+  border-radius: 18px;
+  padding: 1rem;
+}
+#goal ul li {
+  background-image: repeating-linear-gradient(-45deg, #FFEC00 0, #FFEC00 3px, transparent 3px, transparent 6px);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 100% 50%;
+}
+@media screen and (max-width: 768px) {
+  #goal ul {
+    font-size: 18px;
+  }
+}
+
+/* ===============================================
+# ロゴができるまで
+=============================================== */
+#process .container p {
+  padding-left: 1rem;
+}
+#process .container p:before {
+  content: "●";
+  margin-left: -1rem;
+}
+
+.logo {
+  margin: 0 auto;
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.logo .arrow {
+  width: 55px;
+  margin: 0 30px 0 10px;
+}
+@media screen and (max-width: 768px) {
+  .logo .arrow {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    margin: 30px 0;
+  }
+}
+.logo figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
+}
+.logo figure .kage {
+  border: 0.5px solid var(--black);
+  border-radius: 5px;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  .logo figure .kage {
+    height: 150px;
+  }
+}
+.logo figure .try {
+  width: 50vw;
+  height: auto;
+  max-width: 800px;
+}
+.logo figure img {
+  width: auto;
+  height: clamp(11.25rem, 0.139rem + 23.15vw, 17.5rem);
+  max-width: 400px;
+}
+@media screen and (max-width: 768px) {
+  .logo figure img {
+    height: 180px;
+    max-width: 300px;
+  }
+}
+.logo .finish {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .logo .finish {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+.logo .finish figure figcaption {
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+}
+.logo .finish img {
+  width: 25vw;
+  max-width: 300px;
+}
+@media screen and (max-width: 768px) {
+  .logo .finish img {
+    width: 100vw;
+  }
+}
+
+.okuyuki {
+  margin-left: 5vw;
+}
+@media screen and (max-width: 768px) {
+  .okuyuki {
+    margin-left: 0;
+  }
+}
+
+/* ===============================================
+# 感想
+=============================================== */
+#impression {
+  margin-bottom: 3rem;
+  /* ===============================================
+  # 副産物
+  =============================================== */
+}
+#impression p {
+  margin: 3rem 0;
+}
+#impression .byproduct {
+  text-align: center;
+  padding-bottom: 120px;
+}
+#impression .byproduct h3 {
+  font-size: 25px;
+  background-color: var(--yellow);
+  display: inline-block;
+  padding: 0.6rem 2rem;
+  border-radius: 50px;
+  margin: 1rem 0 3rem;
+}
+@media screen and (max-width: 768px) {
+  #impression .byproduct h3 {
+    font-size: clamp(1rem, 0.688rem + 1.56vw, 1.438rem);
+  }
+}
+#impression .byproduct .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 80px 50px;
+}
+@media screen and (max-width: 768px) {
+  #impression .byproduct .container {
+    gap: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+#impression .byproduct figure figcaption {
+  width: 100%;
+}
+#impression .byproduct figure img {
+  height: 100px;
+  width: auto;
+}
+@media screen and (max-width: 768px) {
+  #impression .byproduct figure img {
+    height: 80px;
+  }
+}
+
+/* ===============================================
+# カタカタ
+=============================================== */
+.katakata {
+  height: 200px;
+  width: auto;
+  margin-bottom: 50px;
+  -webkit-animation: katakata 0.1s 8;
+          animation: katakata 0.1s 8;
+}
+@-webkit-keyframes katakata {
+  0% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  100% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+}
+@keyframes katakata {
+  0% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  100% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+}
+
+/* ===============================================
+# フッター
+=============================================== */
+footer {
+  border-top: 1px solid var(--pink);
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--liteyellow);
+}/*# sourceMappingURL=style.css.map */
